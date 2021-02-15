@@ -45,11 +45,14 @@ Y = (num) => arr[num].map((arr_x, i) => arr_x * arr_a[i + 1])
 Y_max = (num) => Math.max(...arr[num]);
 
 
+
+
 //попитка вивести це все
 draw_the_answer = () => {
     let x1 = x0_dx_x_h(0);
     let x2 = x0_dx_x_h(1);
     let x3 = x0_dx_x_h(2);
+    let Y_et = arr_a[0] + arr_a[1] * x1.x0 + arr_a[2] * x2.x0 + arr_a[3] * x3.x0;
     let answer_1 = "";
     for (let i = 0; i < 8; i++) {
         answer_1 += "</tr> <th>" + (i + 1) + "</th>";
@@ -79,6 +82,7 @@ draw_the_answer = () => {
         "            <th>" + x1.x0 + "</th>" +
         "            <th>" + x2.x0 + "</th>" +
         "            <th>" + x3.x0 + "</th>" +
+        "            <th>" + Y_et + "</th>" +
         "         </tr> " +
         "         <tr> " +
         "            <th> d0 </th>" +
@@ -88,3 +92,4 @@ draw_the_answer = () => {
         "         </tr> " +
         "    </table>"
 }
+
