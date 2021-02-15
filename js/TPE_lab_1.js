@@ -24,7 +24,7 @@ let arr = Array(8).fill(null)
 // a0 - a3
 let arr_a = Array(4).fill(null).map(() => Math.floor(Math.random() * 10));
 
-
+// nun_X -> номер стовбця
 x0_dx_x_h = (num_X) => {
     // ідем по стовбах
     const arr_c = arr.map((item) => item[num_X]);
