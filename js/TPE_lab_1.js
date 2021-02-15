@@ -81,7 +81,7 @@ draw_the_answer = () => {
         "            <th>" + Y_et + "</th>" +
         "         </tr> " +
         "         <tr> " +
-        "            <th> d0 </th>" +
+        "            <th> dx </th>" +
         "            <th>" + x1.dx + "</th>" +
         "            <th>" + x2.dx + "</th>" +
         "            <th>" + x3.dx + "</th>" +
