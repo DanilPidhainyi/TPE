@@ -42,23 +42,19 @@ x0_dx_x_h = (num_X) => {
 Y = (num) => arr[num].map((arr_x, i) => arr_x * arr_a[i + 1])
                      .reduce((a, b) => a + b, arr_a[0]);
 
-Y_max = (num) => Math.max(...arr[num]);
-
-
-
-
 //попитка вивести це все
 draw_the_answer = () => {
     let x1 = x0_dx_x_h(0);
     let x2 = x0_dx_x_h(1);
     let x3 = x0_dx_x_h(2);
+    let arr_y = arr.map((item,i) => Y(i));
     let Y_et = arr_a[0] + arr_a[1] * x1.x0 + arr_a[2] * x2.x0 + arr_a[3] * x3.x0;
     let answer_1 = "";
     for (let i = 0; i < 8; i++) {
         answer_1 += "</tr> <th>" + (i + 1) + "</th>";
         arr[i].map((item) => answer_1 += "<th>" + item + "</th>");
-        answer_1 += "<th>" + Y(i) + "</th>";
-        answer_1 += "<th>" + Y_max(i) + "</th>";
+        answer_1 += "<th>" + arr_y[i] + "</th>";
+        answer_1 += "<th>      </th>";
         answer_1 += "<th>" + x1.x_h[i] + "</th>";
         answer_1 += "<th>" + x2.x_h[i] + "</th>";
         answer_1 += "<th>" + x3.x_h[i] + "</th>";
@@ -71,7 +67,7 @@ draw_the_answer = () => {
         "            <th> X2 </th>\n" +
         "            <th> X3 </th>\n" +
         "            <th> Y </th>\n" +
-        "            <th> Y_max </th>\n" +
+        "            <th>      </th>\n" +
         "            <th> Xh1 </th>\n" +
         "            <th> Xh2 </th>\n" +
         "            <th> Xh3 </th>\n" +
@@ -90,6 +86,7 @@ draw_the_answer = () => {
         "            <th>" + x2.dx + "</th>" +
         "            <th>" + x3.dx + "</th>" +
         "         </tr> " +
-        "    </table>"
-}
+        "    </table>" +
+        "<h2><br> max(Y) = " + Math.max(...arr_y) + "</br></h2>"
 
+}
