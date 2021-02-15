@@ -42,7 +42,7 @@ x0_dx_x_h = (num_X) => {
 Y = (num) => arr[num].map((arr_x, i) => arr_x * arr_a[i + 1])
                      .reduce((a, b) => a + b, arr_a[0]);
 
-Y_et = (num) => Math.max(...arr[num]);
+Y_max = (num) => Math.max(...arr[num]);
 
 
 //попитка вивести це все
@@ -55,7 +55,7 @@ draw_the_answer = () => {
         answer_1 += "</tr> <th>" + (i + 1) + "</th>";
         arr[i].map((item) => answer_1 += "<th>" + item + "</th>");
         answer_1 += "<th>" + Y(i) + "</th>";
-        answer_1 += "<th>" + Y_et(i) + "</th>";
+        answer_1 += "<th>" + Y_max(i) + "</th>";
         answer_1 += "<th>" + x1.x_h[i] + "</th>";
         answer_1 += "<th>" + x2.x_h[i] + "</th>";
         answer_1 += "<th>" + x3.x_h[i] + "</th>";
@@ -68,7 +68,7 @@ draw_the_answer = () => {
         "            <th> X2 </th>\n" +
         "            <th> X3 </th>\n" +
         "            <th> Y </th>\n" +
-        "            <th> Y_et </th>\n" +
+        "            <th> Y_max </th>\n" +
         "            <th> Xh1 </th>\n" +
         "            <th> Xh2 </th>\n" +
         "            <th> Xh3 </th>\n" +
